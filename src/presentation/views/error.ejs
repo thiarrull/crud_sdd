@@ -1,0 +1,8 @@
+<%- include('partials/header', { title: `Erro ${statusCode}` }) %>
+<section class="error-panel" role="alert" aria-labelledby="page-title">
+  <p class="eyebrow">Erro <%= statusCode %></p>
+  <h1 id="page-title"><%= statusCode === 404 ? 'Agendamento não encontrado' : 'Não foi possível concluir' %></h1>
+  <p><%= message %></p>
+  <a class="button" href="/appointments">Voltar à lista</a>
+</section>
+<%- include('partials/footer') %>

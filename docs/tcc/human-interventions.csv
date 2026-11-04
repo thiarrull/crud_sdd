@@ -1,0 +1,7 @@
+intervention_id,date,type,files,git_ref,evidence,actor
+HI-001,2026-11-04,prompt to inspect OpenSpec brief,openspec.md,NOT AVAILABLE,"P-001 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"
+HI-002,2026-11-04,Scenario B specification prompt,"openspec/changes/appointment-crud/",NOT AVAILABLE,"P-002 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"
+HI-003,2026-11-04,scope approval,"openspec/changes/appointment-crud/",NOT AVAILABLE,"P-003 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"
+HI-004,2026-11-04,planning approval,"openspec/changes/appointment-crud/",NOT AVAILABLE,"P-004 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"
+HI-005,2026-11-04,behavior decision,"openspec/changes/appointment-crud/specs/appointment-management/spec.md",NOT AVAILABLE,"P-005 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"
+HI-006,2026-11-04,implementation command,"openspec/changes/appointment-crud/tasks.md",NOT AVAILABLE,"P-006 in docs/tcc/ai-interaction-log.md","AUTORIA NÃO DETERMINADA"

@@ -1,0 +1,31 @@
+<%- include('../partials/header', { title: 'Detalhes do agendamento' }) %>
+<article class="detail-panel" aria-labelledby="page-title">
+  <p class="eyebrow">Agendamento</p>
+  <h1 id="page-title"><%= appointment.clientName %></h1>
+  <dl class="appointment-details">
+    <div>
+      <dt>Serviço</dt>
+      <dd><%= appointment.service %></dd>
+    </div>
+    <div>
+      <dt>Data</dt>
+      <dd><time datetime="<%= appointment.appointmentDate %>"><%= appointment.appointmentDate %></time></dd>
+    </div>
+    <div>
+      <dt>Horário</dt>
+      <dd><time><%= appointment.appointmentTime %></time></dd>
+    </div>
+    <div>
+      <dt>Observações</dt>
+      <dd><%= appointment.notes || 'Nenhuma observação.' %></dd>
+    </div>
+  </dl>
+  <div class="form-actions">
+    <a class="button" href="/appointments/<%= appointment.id %>/edit">Editar</a>
+    <a class="button button-secondary" href="/appointments">Voltar à lista</a>
+    <form action="/appointments/<%= appointment.id %>/delete" method="post">
+      <button class="button button-danger" type="submit">Excluir agendamento</button>
+    </form>
+  </div>
+</article>
+<%- include('../partials/footer') %>

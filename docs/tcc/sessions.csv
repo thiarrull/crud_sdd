@@ -1,0 +1,2 @@
+session_id,scenario_id,started_at,finished_at,observed_prompt_count,prompt_count_status,evidence_ref,notes
+d9720e3d-d864-4295-ae12-ad4ad6c941f6,B,2026-11-04T18:10:53.672-03:00,NOT AVAILABLE,6,PARTIALLY MEASURED,ai-interaction-log.md,Visible conversation only; ongoing at evidence cutoff; no complete export

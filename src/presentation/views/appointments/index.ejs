@@ -1,0 +1,37 @@
+<%- include('../partials/header', { title: 'Lista de agendamentos' }) %>
+<section aria-labelledby="page-title">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Agenda</p>
+      <h1 id="page-title">Agendamentos</h1>
+    </div>
+    <a class="button" href="/appointments/new">Novo agendamento</a>
+  </div>
+
+  <% if (appointments.length === 0) { %>
+    <p class="empty-state">Nenhum agendamento cadastrado.</p>
+  <% } else { %>
+    <ul class="appointment-list">
+      <% appointments.forEach((appointment) => { %>
+        <li class="appointment-card">
+          <div>
+            <h2><a href="/appointments/<%= appointment.id %>"><%= appointment.clientName %></a></h2>
+            <p><%= appointment.service %></p>
+            <p>
+              <time datetime="<%= appointment.appointmentDate %>"><%= appointment.appointmentDate %></time>
+              às <time><%= appointment.appointmentTime %></time>
+            </p>
+          </div>
+          <nav class="card-actions" aria-label="Ações do agendamento de <%= appointment.clientName %>">
+            <a href="/appointments/<%= appointment.id %>">Detalhes</a>
+            <a href="/appointments/<%= appointment.id %>/edit">Editar</a>
+            <form action="/appointments/<%= appointment.id %>/delete" method="post">
+              <button class="link-button" type="submit">Excluir</button>
+            </form>
+          </nav>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+<%- include('../partials/footer') %>

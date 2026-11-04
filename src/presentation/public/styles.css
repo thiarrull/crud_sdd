@@ -1,0 +1,281 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17212b;
+  background: #f3f6f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #075985;
+}
+
+a:hover {
+  color: #0c4a6e;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem max(1.25rem, calc((100% - 60rem) / 2));
+  color: #fff;
+  background: #123047;
+}
+
+.site-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header nav,
+.card-actions,
+.form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin: 2rem auto;
+  flex: 1;
+}
+
+.page-heading,
+.appointment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h2 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.4rem;
+  color: #526576;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #075985;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  color: #fff;
+  background: #0c4a6e;
+}
+
+.button-secondary {
+  color: #17212b;
+  background: #e2e8ee;
+}
+
+.button-secondary:hover {
+  color: #17212b;
+  background: #cbd5df;
+}
+
+.button-danger {
+  background: #a12622;
+}
+
+.appointment-list {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.appointment-card,
+.form-panel,
+.detail-panel,
+.error-panel,
+.empty-state {
+  padding: 1.5rem;
+  border: 1px solid #d5dee5;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.appointment-card p {
+  margin-bottom: 0.35rem;
+}
+
+.card-actions {
+  justify-content: flex-end;
+}
+
+.card-actions form,
+.form-actions form {
+  margin: 0;
+}
+
+.link-button {
+  min-height: auto;
+  padding: 0;
+  color: #a12622;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  color: #7f1d1d;
+  background: transparent;
+}
+
+.form-panel,
+.detail-panel,
+.error-panel {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.appointment-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-field label {
+  font-weight: 650;
+}
+
+.form-field label span {
+  color: #526576;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #93a4b2;
+  border-radius: 0.3rem;
+  color: inherit;
+  background: #fff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.appointment-details {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.appointment-details div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+}
+
+.appointment-details dt {
+  font-weight: 700;
+}
+
+.appointment-details dd {
+  margin: 0;
+}
+
+.site-footer {
+  padding: 1.25rem;
+  color: #526576;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 38rem) {
+  .site-header,
+  .page-heading,
+  .appointment-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-details div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

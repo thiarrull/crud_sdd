@@ -1,0 +1,36 @@
+{
+  "name": "tcc-cenario-b-appointments",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scenario B appointment CRUD using OpenSpec and Clean Architecture",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "start": "node src/main/server.js",
+    "dev": "nodemon src/main/server.js",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/**/*.js",
+    "lint": "eslint src tests",
+    "format:check": "prettier --check \"src/**/*.js\" \"tests/**/*.js\" package.json eslint.config.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "12.11.1",
+    "dotenv": "18.0.9",
+    "ejs": "3.1.10",
+    "express": "5.3.0",
+    "helmet": "8.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.14.0",
+    "globals": "17.14.0",
+    "nodemon": "3.1.14",
+    "prettier": "3.9.10",
+    "supertest": "7.3.1"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}

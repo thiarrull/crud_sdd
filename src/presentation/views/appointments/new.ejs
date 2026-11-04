@@ -1,0 +1,11 @@
+<%- include('../partials/header', { title: 'Novo agendamento' }) %>
+<section aria-labelledby="page-title" class="form-panel">
+  <p class="eyebrow">Agenda</p>
+  <h1 id="page-title">Novo agendamento</h1>
+  <%- include('_form', {
+    appointment,
+    action: '/appointments',
+    submitLabel: 'Salvar agendamento'
+  }) %>
+</section>
+<%- include('../partials/footer') %>
